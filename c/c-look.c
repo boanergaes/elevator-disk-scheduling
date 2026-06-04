@@ -24,16 +24,10 @@ int clook(int requests[], int n, int head) {
         head = right[i];
     }
 
-    // jump to left most request and go right
-    if (l > 0) {
-        total_seek += abs(head - left[0]);
-        head = left[0];
-
-        for (int i = 1; i < l; i++) {
-            total_seek += abs(head - left[i]);
-            serve(left[i], total_seek);
-            head = left[i];
-        }
+    for (int i = 0; i < l; i++) {
+        total_seek += abs(head - left[i]);
+        serve(left[i], total_seek);
+        head = left[i];
     }
 
     return total_seek;

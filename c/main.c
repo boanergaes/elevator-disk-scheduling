@@ -7,6 +7,9 @@ int main() {
     int n, head, disk_size;
     int requests[MAX];
 
+    printf("Enter disk size: ");
+    scanf("%d", &disk_size);
+
     printf("Enter number of requests: ");
     scanf("%d", &n);
 
@@ -17,9 +20,6 @@ int main() {
 
     printf("Enter initial head position: ");
     scanf("%d", &head);
-
-    printf("Enter disk size: ");
-    scanf("%d", &disk_size);
 
     printf("Requests: ");
     for (int i = 0; i < n; i++)
